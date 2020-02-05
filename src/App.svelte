@@ -28,7 +28,7 @@
     </a>
 
     <div class="logo">
-      <img src="logo.png" alt={config.workspace.name} />
+      <img src="/static/img/logo.png" alt={config.workspace.name} />
     </div>
 
     <h1 class="title">{config.workspace.name}</h1>

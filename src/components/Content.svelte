@@ -34,6 +34,7 @@
 
   let selectedValue = languages[0];
   $: language = selectedValue.value;
+
 </script>
 
 <section class="content">
@@ -44,7 +45,7 @@
         <div class="description">{@html description}</div>
       {/if}
     </div>
-    <div class="right">
+    <!-- <div class="right">
       <div class="language-selector">
         <Select
           items={languages}
@@ -53,7 +54,7 @@
           isSearchable={false}
         />
       </div>
-    </div>
+    </div> -->
   </div>
   <Rows content={content} {env} {language} {cookiejars} />
 </section>

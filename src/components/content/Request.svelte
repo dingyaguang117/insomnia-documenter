@@ -70,19 +70,15 @@
     <h3 class="request-title"><strong class={request.method.toLowerCase()}>{request.method}</strong> {reqData.name}</h3>
     <pre class="url">{reqData.url}</pre>
 
-    {#if description}
-      <div class="description">{@html description}</div>
-    {/if}
-
     <div class="tables">
 
       {#if request.parameters && request.parameters.length}
         <Table data={content.params()} />
       {/if}
 
-      {#if (request.headers && request.headers.length) || (request.authentication && request.authentication.type)}
+      <!-- {#if (request.headers && request.headers.length) || (request.authentication && request.authentication.type)}
         <Table data={content.headers()} />
-      {/if}
+      {/if} -->
 
       {#if request.body && (request.body.text || request.body.params)}
         <Table data={content.body()} />
@@ -90,8 +86,14 @@
 
     </div>
 
-    <hr />
+    {#if description}
+      <div class="description">{@html description}</div>
+    {/if}
+
+    <hr style="margin-bottom: 80px;"/>
+
   </div>
+  <!--
   <div class="right">
     <div class="code-example">
       <div class="header">
@@ -110,7 +112,7 @@
       <pre>{@html exampleResponse.value}</pre>
     </div>
     {/if}
-  </div>
+  </div>-->
 </div>
 
 <style>

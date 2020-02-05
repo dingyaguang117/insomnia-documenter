@@ -74,7 +74,7 @@ class ContentGenerator {
     });
 
     return {
-      title: 'Parameters',
+      title: 'URL参数',
       rows
     };
   }
@@ -112,13 +112,13 @@ class ContentGenerator {
     switch (data.type) {
       case 'array':
         return {
-          title: 'Body',
+          title: '请求数据',
           note: data.note,
           rows: data.rows
         };
       case 'plain':
         return {
-          title: 'Body',
+          title: '请求数据',
           note: data.note,
           text: data.text
         };
